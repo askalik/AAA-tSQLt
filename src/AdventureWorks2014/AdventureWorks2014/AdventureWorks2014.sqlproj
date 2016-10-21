@@ -225,8 +225,8 @@
     <Build Include="Production\Views\vProductAndDescription.sql" />
     <Build Include="Production\Views\vProductModelCatalogDescription.sql" />
     <Build Include="Production\Views\vProductModelInstructions.sql" />
-    <Build Include="Storage\AW2014FullTextCatalog.sql" />
-    <Build Include="FullTextIndexes.sql" />
+    <None Include="Storage\AW2014FullTextCatalog.sql" />
+    <None Include="FullTextIndexes.sql" />
     <Build Include="dbo\Functions\ufnGetAccountingStartDate.sql" />
     <Build Include="dbo\Functions\ufnGetAccountingEndDate.sql" />
     <Build Include="dbo\Functions\ufnGetProductDealerPrice.sql" />
@@ -247,7 +247,7 @@
     <Build Include="dbo\Stored Procedures\uspLogError.sql" />
     <Build Include="HumanResources\Stored Procedures\uspUpdateEmployeeLogin.sql" />
     <Build Include="HumanResources\Stored Procedures\uspUpdateEmployeePersonalInfo.sql" />
-    <Build Include="dbo\Stored Procedures\uspSearchCandidateResumes.sql" />
+    <None Include="dbo\Stored Procedures\uspSearchCandidateResumes.sql" />
     <Build Include="Database Triggers\ddlDatabaseTriggerLog.sql" />
     <Build Include="dbo\User Defined Types\AccountNumber.sql" />
     <Build Include="dbo\User Defined Types\Flag.sql" />
@@ -266,6 +266,6 @@
     <Build Include="Production\XMLSchemaCollections\ManuInstructionsSchemaCollection.sql" />
     <Build Include="Production\XMLSchemaCollections\ProductDescriptionSchemaCollection.sql" />
     <Build Include="Sales\XMLSchemaCollections\StoreSurveySchemaCollection.sql" />
-    <Build Include="ExtendedProperties.sql" />
+    <None Include="ExtendedProperties.sql" />
   </ItemGroup>
 </Project>
