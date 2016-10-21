@@ -23,6 +23,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultSchema>AdventureWorks2014Test</DefaultSchema>
+    <EnableFullTextSearch>True</EnableFullTextSearch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -46,6 +48,7 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <SqlTargetName>AdventureWorks2014</SqlTargetName>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -57,23 +60,33 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="tSQLt" />
+    <Folder Include="AdventureWorks2014Test" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="tSQLt\Example.sql" />
-    <None Include="tSQLt\SetClrEnabled.sql" />
-    <None Include="tSQLt\tSQLt.class.sql" />
-    <None Include="tSQLt\tsqlt.dacpac" />
-    <None Include="tSQLt\GenerateDacPac.ps1" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="tSQLt\License.txt" />
-    <None Include="tSQLt\ReleaseNotes.txt" />
+    <None Include="LocalDB.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="tSQLt\tsqlt.dacpac">
       <HintPath>tSQLt\tsqlt.dacpac</HintPath>
       <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
     </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdventureWorks2014\AdventureWorks2014.sqlproj">
+      <Name>AdventureWorks2014</Name>
+      <Project>{59bd063b-1ca3-405b-a5fe-7d1b8a48877e}</Project>
+      <Private>True</Private>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="AdventureWorks2014Test.sql" />
+    <Build Include="AdventureWorks2014Test\Setup.sql" />
+    <Build Include="AdventureWorks2014Test\test uspUpdateEmployeeHireInfo_currentflag_is_set_to_true_when_hired.sql" />
+    <Build Include="AdventureWorks2014Test\test SalesCustomer Insert Leading Zeros.sql" />
+    <Build Include="AdventureWorks2014Test\fake_ufnleadingzeros.sql" />
   </ItemGroup>
 </Project>
