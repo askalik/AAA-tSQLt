@@ -5,13 +5,14 @@ AS
 	--  contains calls to methods such as tSQLt.FakeTable and tSQLt.SpyProcedure
 	--  along with INSERTs of relevant data.
 	--  For more information, see http://tsqlt.org/user-guide/isolating-dependencies/
-	declare @BusinessEntityID [int] = 1980; 
+	declare @BusinessEntityID [int] = 10; 
     declare @JobTitle [nvarchar](50) = 'employee numero uno';
     declare @HireDate [datetime] = '2014-01-01 10:10:59.59'
     declare @RateChangeDate [datetime] = '2014-07-01'
     declare @Rate [money] = 24.87
     declare @PayFrequency [tinyint] = 7
     declare @CurrentFlag [tinyint] = 1
+	declare @expectedCurrentFlag [tinyint] = 0
 
 	--Act
 	--  Execute the code under test like a stored procedure, function or view
@@ -26,4 +27,4 @@ AS
 
 	select @actual_CurrentFlag = CurrentFlag from HumanResources.Employee where BusinessEntityID = @BusinessEntityID
 
-	EXEC tSQLt.AssertEquals @Expected = @CurrentFlag, @Actual = @actual_CurrentFlag, @Message = 'Expected CurrentFlag to change.'
+	EXEC tSQLt.AssertEquals @Expected = @expectedCurrentFlag, @Actual = @actual_CurrentFlag, @Message = 'Expected CurrentFlag to change.'
