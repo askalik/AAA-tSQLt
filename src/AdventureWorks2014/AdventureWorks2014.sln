@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AdventureWorks2014", "AdventureWorks2014\AdventureWorks2014.sqlproj", "{59BD063B-1CA3-405B-A5FE-7D1B8A48877E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tSQLt", "tSQLt", "{9ACF22CF-7F26-4277-8038-0790320C96E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuiltIn", "BuiltIn", "{4296A846-82AE-404C-B6E9-8A089DF2A252}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AW2014-tSQLt", "AW2014-tSQLt\AW2014-tSQLt.sqlproj", "{2095401A-E130-4946-9157-ACAFDCFC954D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59BD063B-1CA3-405B-A5FE-7D1B8A48877E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59BD063B-1CA3-405B-A5FE-7D1B8A48877E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59BD063B-1CA3-405B-A5FE-7D1B8A48877E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{59BD063B-1CA3-405B-A5FE-7D1B8A48877E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59BD063B-1CA3-405B-A5FE-7D1B8A48877E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59BD063B-1CA3-405B-A5FE-7D1B8A48877E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2095401A-E130-4946-9157-ACAFDCFC954D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2095401A-E130-4946-9157-ACAFDCFC954D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2095401A-E130-4946-9157-ACAFDCFC954D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2095401A-E130-4946-9157-ACAFDCFC954D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2095401A-E130-4946-9157-ACAFDCFC954D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2095401A-E130-4946-9157-ACAFDCFC954D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2095401A-E130-4946-9157-ACAFDCFC954D} = {9ACF22CF-7F26-4277-8038-0790320C96E9}
+	EndGlobalSection
+EndGlobal
